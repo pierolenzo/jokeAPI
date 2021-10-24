@@ -1,0 +1,12 @@
+<h1>Joke App</h1>
+<div *ngIf="joke.type =='twopart'">
+  <p>{{ joke.setup }}</p>
+  <p>{{ joke.delivery }}</p>
+</div>
+
+<div *ngIf="joke.type =='single'">
+  <p>{{ joke.joke }}</p>
+</div>
+
+<button class="btn btn-primary" (click)="stop()">Stop</button>
+
