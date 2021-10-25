@@ -1,13 +1,13 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry, tap } from 'rxjs/operators';
+import { Observable, of, throwError } from 'rxjs';
+import { catchError, delay, mergeMap, repeat, retry, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class GetJokeService {
-  private URL!: string;
+  private URL: string;
 
   constructor(private http: HttpClient) {
     this.URL = 'https://v2.jokeapi.dev/joke/any';
