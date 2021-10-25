@@ -9,5 +9,9 @@
 </div>
 
 <button class="btn btn-primary" (click)="stop()">Stop</button>
+<ng-container *ngIf="togleButton">
+  <button class="btn btn-primary" routerLink="/like" routerLinkActive="active">Vedi Like</button>
+  <button class="btn btn-danger" routerLink="/dislike" routerLinkActive="active">Vedi Dislike</button>
+</ng-container>
 <button class="btn btn-primary" (click)="add(joke, 'like')">Like</button>
 <button class="btn btn-danger" (click)="add(joke, 'dislike')">Dislike</button>

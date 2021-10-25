@@ -4,25 +4,7 @@
       "error": false,
       "category": "Programming",
       "type": "single",
-      "joke": "Saying that Java is nice because it works on every OS is like saying that anal sex is nice because it works on every gender.",
-      "flags": {
-        "nsfw": true,
-        "religious": false,
-        "political": false,
-        "racist": false,
-        "sexist": false,
-        "explicit": true
-      },
-      "id": 30,
-      "safe": false,
-      "lang": "en"
-    },
-    {
-      "error": false,
-      "category": "Programming",
-      "type": "twopart",
-      "setup": "Why does no one like SQLrillex?",
-      "delivery": "He keeps dropping the database.",
+      "joke": "The six stages of debugging:\n1. That can't happen.\n2. That doesn't happen on my machine.\n3. That shouldn't happen.\n4. Why does that happen?\n5. Oh, I see.\n6. How did that ever work?",
       "flags": {
         "nsfw": false,
         "religious": false,
@@ -31,7 +13,25 @@
         "sexist": false,
         "explicit": false
       },
-      "id": 13,
+      "id": 123,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Christmas",
+      "type": "twopart",
+      "setup": "What says Oh Oh Oh?",
+      "delivery": "Santa walking backwards!",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 245,
       "safe": true,
       "lang": "en"
     }
@@ -41,8 +41,25 @@
       "error": false,
       "category": "Misc",
       "type": "twopart",
-      "setup": "How do construction workers party?",
-      "delivery": "They raise the roof.",
+      "setup": "Why does Beyonce sing \"to the left, to the left\"?",
+      "delivery": "Because women don't have rights.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": true,
+        "explicit": false
+      },
+      "id": 134,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Dark",
+      "type": "single",
+      "joke": "I didn't vaccinate my 10 kids and the one that survived is fine!",
       "flags": {
         "nsfw": false,
         "religious": false,
@@ -51,15 +68,16 @@
         "sexist": false,
         "explicit": false
       },
-      "id": 217,
-      "safe": true,
+      "id": 96,
+      "safe": false,
       "lang": "en"
     },
     {
       "error": false,
-      "category": "Programming",
-      "type": "single",
-      "joke": "Saying that Java is nice because it works on every OS is like saying that anal sex is nice because it works on every gender.",
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "What's grey and comes in pints?",
+      "delivery": "An elephant.",
       "flags": {
         "nsfw": true,
         "religious": false,
@@ -68,25 +86,7 @@
         "sexist": false,
         "explicit": true
       },
-      "id": 30,
-      "safe": false,
-      "lang": "en"
-    },
-    {
-      "error": false,
-      "category": "Dark",
-      "type": "twopart",
-      "setup": "I've been in 15 school shootings and I was lucky to survive!",
-      "delivery": "I just had to be nice with the cops and not resist.",
-      "flags": {
-        "nsfw": false,
-        "religious": false,
-        "political": true,
-        "racist": false,
-        "sexist": false,
-        "explicit": false
-      },
-      "id": 98,
+      "id": 216,
       "safe": false,
       "lang": "en"
     }

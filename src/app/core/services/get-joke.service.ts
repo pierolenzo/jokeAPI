@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, of, Subject, throwError } from 'rxjs';
 import {
   catchError,
   delay,
@@ -17,9 +17,17 @@ export class GetJokeService {
   private URL: string;
   private DELAY: number;
 
+  private jokeSubject!: Subject<Joke>;
+  public joke$!: Observable<Joke>;
+
+
   constructor(private http: HttpClient) {
     this.URL = 'https://v2.jokeapi.dev/joke/any';
     this.DELAY = 5000;
+
+    this.jokeSubject = new Subject<Joke>();
+    this.joke$ = this.jokeSubject.asObservable();
+
   }
 
   /**
@@ -33,9 +41,20 @@ export class GetJokeService {
   }
 
   /**
+   * getLike() - Get jokes from API
+   */
+   public getAll(preference: string): Observable<Joke[]> {
+    return this.http.get<Joke[]>(`http://localhost:3000/${preference}`).pipe(
+      retry(3),
+      catchError(this.handleError)
+    );
+  }
+
+  /**
    * add()
    */
   add(joke: Joke, preference: 'like' | 'dislike'): Observable<Joke> {
+    this.jokeSubject.next(joke);
     return this.http.post<Joke>(`http://localhost:3000/${preference}`, joke).pipe(
       retry(3),
       catchError(this.handleError)
