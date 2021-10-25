@@ -17,16 +17,20 @@ export class GetJokeService {
   private URL: string;
   private DELAY: number;
 
-  private jokeSubject!: Subject<Joke>;
-  public joke$!: Observable<Joke>;
+  private jokeSubjectLike!: Subject<Joke>;
+  private jokeSubjectDislike!: Subject<Joke>;
+  public jokeLike$!: Observable<Joke>;
+  public jokeDislike$!: Observable<Joke>;
 
 
   constructor(private http: HttpClient) {
     this.URL = 'https://v2.jokeapi.dev/joke/any';
     this.DELAY = 5000;
 
-    this.jokeSubject = new Subject<Joke>();
-    this.joke$ = this.jokeSubject.asObservable();
+    this.jokeSubjectLike = new Subject<Joke>();
+    this.jokeSubjectDislike = new Subject<Joke>();
+    this.jokeLike$ = this.jokeSubjectLike.asObservable();
+    this.jokeDislike$ = this.jokeSubjectDislike.asObservable();
 
   }
 
@@ -54,7 +58,10 @@ export class GetJokeService {
    * add()
    */
   add(joke: Joke, preference: 'like' | 'dislike'): Observable<Joke> {
-    this.jokeSubject.next(joke);
+    preference === 'like'
+      ? this.jokeSubjectLike.next(joke)
+      : this.jokeSubjectDislike.next(joke)
+
     return this.http.post<Joke>(`http://localhost:3000/${preference}`, joke).pipe(
       retry(3),
       catchError(this.handleError)

@@ -1,8 +1,8 @@
 import { Observable, Subscription } from 'rxjs';
-import { GetJokeService } from './../../core/services/get-joke.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Joke } from 'src/app/models/Joke';
+import { GetJokeService } from 'src/app/core/services/get-joke.service';
 
 @Component({
   selector: 'app-like',
@@ -22,7 +22,7 @@ export class LikeComponent implements OnInit, OnDestroy {
     this.subscriptionData = this.getJokeService.getAll('like')
       .subscribe(d => this.data = d);
 
-    this.subscriptionJoke = this.getJokeService.joke$
+    this.subscriptionJoke = this.getJokeService.jokeLike$
       .subscribe( d => this.data.push(d));
   }
 

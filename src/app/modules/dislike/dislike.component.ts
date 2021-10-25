@@ -20,7 +20,7 @@ export class DislikeComponent implements OnInit, OnDestroy {
     this.subscriptionData = this.getJokeService.getAll('dislike')
       .subscribe(d => this.data = d);
 
-    this.subscriptionJoke = this.getJokeService.joke$
+    this.subscriptionJoke = this.getJokeService.jokeDislike$
       .subscribe( d => this.data.push(d));
   }
 

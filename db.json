@@ -34,6 +34,59 @@
       "id": 245,
       "safe": true,
       "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Programming",
+      "type": "single",
+      "joke": "Java and C were telling jokes. It was C's turn, so he writes something on the wall, points to it and says \"Do you get the reference?\" But Java didn't.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 4,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Misc",
+      "type": "twopart",
+      "setup": "What do you use to blindfold an Asian?",
+      "delivery": "Floss.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": true,
+        "sexist": false,
+        "explicit": true
+      },
+      "id": 129,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Misc",
+      "type": "twopart",
+      "setup": "Why are cats so good at video games?",
+      "delivery": "They have nine lives.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 255,
+      "safe": true,
+      "lang": "en"
     }
   ],
   "dislike": [
@@ -88,6 +141,77 @@
       },
       "id": 216,
       "safe": false,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "I just saw my wife trip over and drop a basket full of ironed clothes.",
+      "delivery": "I watched it all unfold.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "safe": true,
+      "id": 281,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Dark",
+      "type": "single",
+      "joke": "Doctor: \"I have some news about your baby.\"\nParents: \"Don't tell us the gender, we want to keep it a surprise.\"\nDoctor: \"Oh I get it, you're those type of people. Okay, well IT is not breathing.\"",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 138,
+      "safe": false,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Misc",
+      "type": "twopart",
+      "setup": "Why are cats so good at video games?",
+      "delivery": "They have nine lives.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "id": 255,
+      "safe": true,
+      "lang": "en"
+    },
+    {
+      "error": false,
+      "category": "Pun",
+      "type": "twopart",
+      "setup": "Why does the size of the snack not matter to a giraffe?",
+      "delivery": "Because even a little bit goes a long way.",
+      "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": false,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+      },
+      "safe": true,
+      "id": 290,
       "lang": "en"
     }
   ]

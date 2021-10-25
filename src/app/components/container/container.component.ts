@@ -1,6 +1,6 @@
-import { GetJokeService } from './../../core/services/get-joke.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { GetJokeService } from 'src/app/core/services/get-joke.service';
 import { Joke } from 'src/app/models/Joke';
 
 @Component({
