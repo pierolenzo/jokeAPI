@@ -8,6 +8,7 @@ import {
   repeat,
   retry,
 } from 'rxjs/operators';
+import { Joke } from 'src/app/models/Joke';
 
 @Injectable({
   providedIn: 'root',
@@ -24,7 +25,7 @@ export class GetJokeService {
   /**
    * get() - Get jokes from API
    */
-  public get(): Observable<any> {
+  public get(): Observable<Joke> {
     return this.http.get<any>(this.URL).pipe(
       retry(3),
       catchError(this.handleError)
@@ -32,9 +33,19 @@ export class GetJokeService {
   }
 
   /**
+   * add()
+   */
+  add(joke: Joke, preference: 'like' | 'dislike'): Observable<Joke> {
+    return this.http.post<Joke>(`http://localhost:3000/${preference}`, joke).pipe(
+      retry(3),
+      catchError(this.handleError)
+    )
+  }
+
+  /**
    * poll() - Executes get()
    */
-  public poll(): Observable<any> {
+  public poll(): Observable<Joke> {
     return of({}).pipe(
       mergeMap((_) => this.get()),
       delay(this.DELAY),
